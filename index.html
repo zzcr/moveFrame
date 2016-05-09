@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>完美运动框架</title>
+		<style>
+			div{
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				border: 2px solid #000;
+				opacity: 0.3;
+				font-size: 12px;
+				text-align: center;
+				line-height: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div">正</div>
+	</body>
+	<script src="js/moveStart.js"></script>
+	<script>
+		window.onload=function(){
+			var div=document.getElementById('div');
+			div.timer=null;
+			div.onmouseover=function(){
+				moveStart(this,{'width':300,'height':300,'opacity':1},function(){
+					moveStart(div,{'fontSize':200});
+				})
+			};
+		};
+	</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
